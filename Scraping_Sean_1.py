@@ -4,9 +4,10 @@ import pandas as pd
 
 # Initialize an empty list for all records
 all_records = []
+page_count = 0  # Counter to track the number of pages processed
 
-# Loop through the range of pages from 8713 to 8800
-for page_num in range(1, 10000):
+# Loop through the range of pages from 1 to 80000
+for page_num in range(1, 80000):
     url = f"https://orbilu.uni.lu/handle/10993/{page_num}"
 
     # Send GET request
@@ -37,17 +38,27 @@ for page_num in range(1, 10000):
                 if "English" in language:  # Only save if the language is English
                     record["Language"] = language
 
-        # Add the record to the list if it has content and the language is English
-        if "Language" in record:
+        # Add the record to the list if it has content and the language is English, and abstract is not empty
+        if "Language" in record and "Abstract" in record and record["Abstract"]:
             all_records.append(record)
+
+        # Update the page counter
+        page_count += 1
+
+        # Save to CSV every 500 pages
+        if page_count % 500 == 0:
+            df = pd.DataFrame(all_records)
+            df.to_csv(f"scraped_page_{page_count}.csv", index=False)
+            print(f"Saved data from {page_count} pages to scraped_page_{page_count}.csv")
+            all_records = []  # Reset the list after saving
 
     else:
         print(f"Failed to retrieve page {page_num}. Status code: {response.status_code}")
 
-# Save all records to CSV
+# Save any remaining records if pages left after the loop
 if all_records:
     df = pd.DataFrame(all_records)
-    df.to_csv("scraped_1_10000.csv", index=False)
-    print("Data saved to scraped_1_10000.csv")
+    df.to_csv(f"scraped_page_{page_count}.csv", index=False)
+    print(f"Saved the final data from {page_count} pages to scraped_page_{page_count}.csv")
 else:
     print("No data found.")
