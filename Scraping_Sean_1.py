@@ -62,3 +62,18 @@ if all_records:
     print(f"Saved the final data from {page_count} pages to scraped_page_{page_count}.csv")
 else:
     print("No data found.")
+
+
+# import pandas as pd
+# import glob
+#
+#
+# csv_files = glob.glob("scraped_page_*.csv")
+# combined_df = pd.DataFrame()
+#
+#
+# for file in csv_files:
+#     df = pd.read_csv(file)
+#     combined_df = pd.concat([combined_df, df], ignore_index=True)
+#
+# combined_df.to_csv("ORBilu_dataset_combine.csv", index=False)
