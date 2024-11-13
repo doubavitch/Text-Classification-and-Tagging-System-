@@ -3,6 +3,11 @@
 {% block title %}Home - Simple Flask Website{% endblock %}
 
 {% block content %}
-    <h1>Welcome to the Home Page</h1>
-    <p>This is a simple website built with Flask.</p>
+    <h1>Research Paper Abstract Classification and Tagging</h1>
+    <p>Enter an abstract from a Research Paper:</p>
+    <form method="post">
+        <label for="abstract">Research Paper Abstract:</label>
+        <textarea id="abstract" name="abstract" required></textarea>
+        <button type="submit">Send</button>
+    </form>
 {% endblock %}

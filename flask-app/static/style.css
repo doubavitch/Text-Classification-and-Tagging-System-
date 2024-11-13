@@ -7,6 +7,7 @@ body {
 
 header {
     background-color: #333;
+    color:white;
     padding: 1em;
     text-align: center;
 }
@@ -32,7 +33,7 @@ footer {
 }
 
 form {
-    max-width: 500px;
+    max-width: 60%;
     margin: auto;
     display: flex;
     flex-direction: column;
