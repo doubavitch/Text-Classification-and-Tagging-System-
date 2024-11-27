@@ -1,0 +1,186 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, #1e1e2f, #0f0f1a);
+    color: #e0e0e0;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+/* Optional: For additional sections to take up space */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background-color: #2b2b40;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+/* Adjust the layout of the header to stack the logo and title above the menu */
+header nav {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Space between the title and the menu */
+}
+
+header nav h1 {
+    margin-top: 0px;
+    margin-bottom: 2px; /* Space between header and navigation menu */
+    font-size: 2rem; /* Adjust this value to change the size of the header */
+}
+
+/* Navigation menu */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 5em;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #cfcfcf;
+}
+
+/* Main Content */
+h1, h2, h3 {
+    text-align: left;
+    color: #f5f5f5;
+    margin-top: 30px;
+    margin-left:30px ;
+}
+
+/* Form Styling */
+form {
+    margin: 2em auto;
+    padding: 1.5em;
+    background-color: #2b2b40;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+form textarea, form input {
+    font-size: 1rem;
+    padding: 0.75em;
+    width: 600px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #3a3a4f;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    height: 220px;
+}
+
+form textarea:focus, form input:focus {
+    border-color: #1976d2;
+    outline: none;
+    background-color: #44445a;
+}
+
+form button {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    background-color: #0d47a1;
+    transform: translateY(0);
+}
+
+form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.5);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #2b2b40;
+    color: #cfcfcf;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #63a4ff;
+}
+
+footer i {
+    margin-right: 5px;
+}
+
+/* Navigation Bar (Individual Menu Items) */
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+ul {
+    list-style: circle;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+li {
+    text-align: left;
+}
+
+p, ul {
+    line-height: 1.8;
+    margin-left: 30px;
+}
+
+main {
+    padding: 2em;
+    text-align: left;
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between the logo and the text */
+}
+
+.logo {
+    height: 70px;
+    width: auto; /* Ensures aspect ratio is maintained */
+}

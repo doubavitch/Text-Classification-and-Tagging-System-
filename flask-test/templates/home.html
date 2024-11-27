@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Classification and Tagging System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="/static/images/DALL·E 2024-11-27 09.44.38.png" alt="Logo" class="logo">
+                <h1>Research Paper Abstract Classifier</h1>
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h2>Enter the Research Paper Abstract:</h2>
+    <form method="POST">
+        <textarea name="abstract" rows="4" cols="50" required></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if category %}
+        <h3>Predicted Category: {{ category }}</h3>
+    {% endif %}
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Islam Ali, Shuchao Cui, Apoorv Dhyani, Clara Duchossois, Merwa Tariq</p>
+        <a href="https://github.com/doubavitch/Text-Classification-and-Tagging-System-" 
+           target="_blank" 
+           class="github-icon">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+    </footer>
+</body>
+</html>
