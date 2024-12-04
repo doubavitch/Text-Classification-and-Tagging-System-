@@ -17,6 +17,7 @@
             </div>
             <ul>
                 <li><a href="/">Home</a></li>
+                <li><a href="/admin">Admin Panel</a></li>
                 <li><a href="/about">About</a></li>
             </ul>
         </nav>
@@ -24,10 +25,10 @@
     
     <h2>Enter the Research Paper Abstract here:</h2>
     <form method="POST">
-        <textarea name="abstract" rows="4" cols="50" required></textarea><br><br>
+        <textarea name="abstract" rows="4" cols="50" required>{{ abstract_text or '' }}</textarea><br><br>
         <button type="submit">Submit</button>
     </form>
-
+    
     {% if category %}
     <h2>Predicted Category: <span class="predicted-category">{{ category }}</span></h2>
     {% endif %}

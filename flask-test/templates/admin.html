@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Classification and Tagging System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="/static/images/DALL·E 2024-11-27 09.44.38.png" alt="Logo" class="logo">
+                <h1>Research Paper Abstract Classifier</h1>
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/admin">Admin Panel</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Admin Panel</h1>
+        <div class="admin-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Abstract</th>
+                        <th>Predicted Category</th>
+                        <th>Added Tags</th>
+                        <th>Add Tags</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for submission in submissions %}
+                    <tr>
+                        <td>{{ submission[0] }}</td> <!-- ID -->
+                        <td>{{ submission[1] }}</td> <!-- Abstract -->
+                        <td>{{ submission[2] }}</td> <!-- Predicted Category -->
+                        <td>{{ submission[3] if submission[3] else 'None' }}</td> <!-- Added Tags -->
+                        <td>
+                            <form method="POST">
+                                <input type="text" name="corrected_category" placeholder="Add Tag" value="">
+                                <input type="hidden" name="id" value="{{ submission[0] }}">
+                                <button type="submit">Submit</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+           
+    </main>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Islam Ali, Shuchao Cui, Apoorv Dhyani, Clara Duchossois, Merwa Tariq</p>
+        <a href="https://github.com/doubavitch/Text-Classification-and-Tagging-System-" 
+           target="_blank" 
+           class="github-icon">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+    </footer>
+</body>
+</html>

@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: linear-gradient(to bottom, #1e1e2f, #0f0f1a);
+    background: #1e1e2f;
     color: #e0e0e0;
     text-align: left;
     font-family: Arial, sans-serif;
@@ -201,5 +201,123 @@ main {
     font-weight: bold; /* Make the text bold */
     font-size: 1em;
     margin-left: 0px; /* Align with other content */
+}
+
+/* Table Styles */
+table {
+    width: 90%; /* Make the table take up most of the page width */
+    margin: 2em auto; /* Center the table on the page */
+    border-collapse: collapse; /* Remove gaps between table cells */
+    background-color: #2b2b40; /* Table background color */
+    border: 1px solid #444; /* Table border */
+    border-radius: 8px; /* Rounded corners for the table */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    overflow: hidden; /* Ensure rounded corners work */
+}
+
+table th, table td {
+    padding: 12px 15px; /* Add padding for better readability */
+    text-align: left; /* Align text to the left */
+    color: #e0e0e0; /* Text color */
+    border-bottom: 1px solid #444; /* Add a subtle border between rows */
+}
+
+table th {
+    background-color: #3a3a4f; /* Header row background color */
+    font-weight: bold; /* Bold header text */
+    font-size: 1.1em; /* Slightly larger text for headers */
+    text-transform: uppercase; /* Uppercase header text */
+}
+
+table tr:nth-child(odd) {
+    background-color: #2f2f4a; /* Darker background for odd rows */
+}
+
+table tr:nth-child(even) {
+    background-color: #3a3a4f; /* Slightly lighter background for even rows */
+}
+
+table tr:hover {
+    background-color: #44445a; /* Highlight the row on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Buttons in Table */
+table form button {
+    padding: 6px 12px; /* Smaller padding for table buttons */
+    font-size: 0.9em; /* Smaller font size for table buttons */
+    background-color: #1976d2; /* Same button style as the form */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+table form button:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+}
+
+table form button:active {
+    background-color: #0d47a1;
+    transform: translateY(0);
+}
+
+/* Smaller Input Form for Corrected Category */
+table form input[type="text"] {
+    width: 120px; /* Smaller width */
+    height: 120px;
+    padding: 4px 6px; /* Less padding */
+    font-size: 0.85em; /* Slightly smaller font */
+    color: #e0e0e0; /* Text color */
+    background-color: #3a3a4f; /* Input background color */
+    border: 1px solid #444; /* Input border */
+    border-radius: 4px; /* Rounded corners */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+table form input[type="text"]:focus {
+    border-color: #1976d2; /* Highlight border on focus */
+    background-color: #44445a; /* Slightly lighter background */
+    outline: none; /* Remove default outline */
+}
+
+/* Styling for Added Tags Column */
+table form input[type="text"] {
+    width: 120px;
+    padding: 4px 6px;
+    font-size: 0.85em;
+    color: #e0e0e0;
+    background-color: #3a3a4f;
+    border: 1px solid #444;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+table form button {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.85em;
+    cursor: pointer;
+}
+
+table form button:hover {
+    background-color: #1565c0;
+}
+
+/* Add margin below the table */
+table {
+    margin-bottom: 70px; /* Adjust this value to increase or decrease the space */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Add spacing for the admin panel container */
+.admin-container {
+    margin-bottom: 30px; /* Ensure there's space between the table and footer */
 }
 
