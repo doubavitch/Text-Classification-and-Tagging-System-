@@ -1,4 +1,5 @@
-flask-test/flask-env-test/*
+flask-test/flask-test-env/*
+flask-test/*.joblib
 .DS_Store
 merged_df.csv
 merged_df_abstract_preprocess_all.csv
