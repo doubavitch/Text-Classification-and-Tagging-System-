@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 import numpy as np
 
 # Load the model and vectorizer
-model = joblib.load('2_Model_Logistic_MultiDiscipline.joblib')
+model = joblib.load('4_Model_MLP.joblib')
 vectorizer = joblib.load('1_vectorizer_Logistic_one_hot.joblib')
 
 app = Flask(__name__)

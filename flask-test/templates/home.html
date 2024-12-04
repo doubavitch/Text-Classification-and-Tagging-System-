@@ -22,15 +22,16 @@
         </nav>
     </header>
     
-    <h2>Enter the Research Paper Abstract:</h2>
+    <h2>Enter the Research Paper Abstract here:</h2>
     <form method="POST">
         <textarea name="abstract" rows="4" cols="50" required></textarea><br><br>
         <button type="submit">Submit</button>
     </form>
 
     {% if category %}
-        <h3>Predicted Category: {{ category }}</h3>
+    <h2>Predicted Category: <span class="predicted-category">{{ category }}</span></h2>
     {% endif %}
+
 
     <!-- Footer -->
     <footer>
