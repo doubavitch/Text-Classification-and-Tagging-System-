@@ -190,8 +190,22 @@ main {
     gap: 15px; /* Space between the logo and the text */
 }
 
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between the logo and the text */
+}
+
+#image{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    max-height: 500px;
+}
+
 .logo {
-    height: 70px;
+    height: 125px;
     width: auto; /* Ensures aspect ratio is maintained */
 }
 
@@ -202,6 +216,8 @@ main {
     font-size: 1em;
     margin-left: 0px; /* Align with other content */
 }
+
+
 
 /* Table Styles */
 table {
