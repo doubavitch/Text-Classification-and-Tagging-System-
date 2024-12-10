@@ -270,6 +270,8 @@ table form {
     background-color: #2b2b40; /* Box background color */
     border-radius: 8px; /* Optional: round corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    justify-content: flex-start; /* Align form contents to the top */
+    margin-left: 0; /* Ensure no margin on the left side */
 }
 
 /* Buttons in Table */
