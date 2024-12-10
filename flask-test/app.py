@@ -26,6 +26,15 @@ def setup_database():
 
 setup_database()
 
+@app.route('/reset_database', methods=['POST'])
+def reset_database():
+    with sqlite3.connect('submissions.db') as conn:
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM submissions")  # Deletes all rows from the table
+        conn.commit()
+    return redirect(url_for('admin'))  # Redirect to the admin panel after reset
+
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
     category = None

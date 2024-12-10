@@ -258,6 +258,20 @@ table tr:hover {
     transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
+/* Styling for the Added Tags form */
+table form {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: center; /* Center content horizontally */
+    gap: 8px; /* Add spacing between input and button */
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Match the height to make it a square */
+    padding: 10px; /* Optional: add inner spacing */
+    background-color: #2b2b40; /* Box background color */
+    border-radius: 8px; /* Optional: round corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
 /* Buttons in Table */
 table form button {
     padding: 6px 12px; /* Smaller padding for table buttons */
@@ -268,6 +282,7 @@ table form button {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block; /* Ensures the button stays on its own line */
 }
 
 table form button:hover {
@@ -312,11 +327,12 @@ table form input[type="text"] {
 }
 
 table form button {
+    width: 134px; /* Match the text input width */
+    padding: 6px; /* Match the padding of the text input */
     background-color: #1976d2;
     color: white;
     border: none;
     border-radius: 4px;
-    padding: 4px 8px;
     font-size: 0.85em;
     cursor: pointer;
 }
@@ -327,7 +343,7 @@ table form button:hover {
 
 /* Add margin below the table */
 table {
-    margin-bottom: 70px; /* Adjust this value to increase or decrease the space */
+    margin-bottom: 30px; /* Adjust this value to increase or decrease the space */
     width: 100%;
     border-collapse: collapse;
 }
